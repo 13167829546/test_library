@@ -1575,3 +1575,16 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 
 ###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
 
+1647327275495	geckodriver	INFO	Listening on 127.0.0.1:55206
+1647327278546	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55207" "-no-remote" "-profile" "C:\\Users\\huwo\\AppData\\Local\\Temp\\rust_mozprofilewUZhdn"
+1647327278834	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\huwo\\AppData\\Local\\Temp\\rust_mozprofilewUZhdn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55207/devtools/browser/3f788066-ff54-404a-a6ca-5560b41cf7e2
+1647327280659	Marionette	INFO	Listening on port 55212
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1647327280715	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647327282086	Marionette	INFO	Stopped listening on port 55212
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 24652, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1647327282443	geckodriver::marionette	ERROR	Failed to close browser connection: 拒绝访问。 (os error 5)
