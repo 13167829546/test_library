@@ -1,0 +1,40 @@
+from element.SysSet_E import SysSet_E
+class SysSet_B(SysSet_E):
+	def add_SysSet(self,sleepTime10,SysSetName,sleepTime1,SysSetNo,SysSetValue,SysSetDec,sleepTime2,sleepTime3):
+		self.clickSysNav()
+		self.WaitTime(sleepTime10)
+		self.clickDataCenter()
+		self.waitSysManVisible()
+		self.clickSys()
+		self.clickSysSet()
+		self.clickAddButton()
+		self.sendSysSetName(SysSetName)
+		self.sendSysSetType()
+		self.WaitTime(sleepTime1)
+		self.sendSysSetTypeValue()
+		self.sendSysSetNo(SysSetNo)
+		self.sendSysSetValue(SysSetValue)
+		self.sendSysSetDec(SysSetDec)
+		self.WaitTime(sleepTime2)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime3)
+	def search_SysSet(self,SysSetName,sleepTime4,sleepTime5,IsSysSetName):
+		self.sendSearchKey(SysSetName)
+		self.WaitTime(sleepTime4)
+		self.clickSearchButton()
+		self.WaitTime(sleepTime5)
+		self.assertSysSetName(IsSysSetName)
+	def alter_SysSet(self,SysSetValue,sleepTime6,IsSysSetValue):
+		self.clickAlterButton()
+		self.clearSysSetValue()
+		self.alterSysSetValue(SysSetValue)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime6)
+		self.assertSysSetValue(IsSysSetValue)
+	def del_SysSet(self,sleepTime7,sleepTime8,sumSysSetNumber):
+		self.clickDelButton()
+		self.WaitTime(sleepTime7)
+		self.clickConfirmButton()
+		self.WaitTime(sleepTime8)
+		self.getIsSameSysSetText(sumSysSetNumber)
+	

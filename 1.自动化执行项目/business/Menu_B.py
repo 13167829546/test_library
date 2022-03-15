@@ -1,0 +1,40 @@
+from element.Menu_E import Menu_E
+class Menu_B(Menu_E):
+	def add_Menu(self,sleepTime10,MenuName,sleepTime1,MenuNo,MenuValue,MenuDec,sleepTime2,sleepTime3):
+		self.clickSysNav()
+		self.WaitTime(sleepTime10)
+		self.clickDataCenter()
+		self.waitSysManVisible()
+		self.clickSys()
+		self.clickMenu()
+		self.clickAddButton()
+		self.sendMenuName(MenuName)
+		self.sendMenuType()
+		self.WaitTime(sleepTime1)
+		self.sendMenuTypeValue()
+		self.sendMenuNo(MenuNo)
+		self.sendMenuValue(MenuValue)
+		self.sendMenuDec(MenuDec)
+		self.WaitTime(sleepTime2)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime3)
+	def search_Menu(self,MenuName,sleepTime4,sleepTime5,IsMenuName):
+		self.sendSearchKey(MenuName)
+		self.WaitTime(sleepTime4)
+		self.clickSearchButton()
+		self.WaitTime(sleepTime5)
+		self.assertMenuName(IsMenuName)
+	def alter_Menu(self,MenuValue,sleepTime6,IsMenuValue):
+		self.clickAlterButton()
+		self.clearMenuValue()
+		self.alterMenuValue(MenuValue)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime6)
+		self.assertMenuValue(IsMenuValue)
+	def del_Menu(self,sleepTime7,sleepTime8,sumMenuNumber):
+		self.clickDelButton()
+		self.WaitTime(sleepTime7)
+		self.clickConfirmButton()
+		self.WaitTime(sleepTime8)
+		self.getIsSameMenuText(sumMenuNumber)
+	

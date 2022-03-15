@@ -1,0 +1,40 @@
+from element.App_E import App_E
+class App_B(App_E):
+	def add_App(self,sleepTime10,AppName,sleepTime1,AppNo,AppValue,AppDec,sleepTime2,sleepTime3):
+		self.clickSysNav()
+		self.WaitTime(sleepTime10)
+		self.clickDataCenter()
+		self.waitSysManVisible()
+		self.clickSys()
+		self.clickApp()
+		self.clickAddButton()
+		self.sendAppName(AppName)
+		self.sendAppType()
+		self.WaitTime(sleepTime1)
+		self.sendAppTypeValue()
+		self.sendAppNo(AppNo)
+		self.sendAppValue(AppValue)
+		self.sendAppDec(AppDec)
+		self.WaitTime(sleepTime2)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime3)
+	def search_App(self,AppName,sleepTime4,sleepTime5,IsAppName):
+		self.sendSearchKey(AppName)
+		self.WaitTime(sleepTime4)
+		self.clickSearchButton()
+		self.WaitTime(sleepTime5)
+		self.assertAppName(IsAppName)
+	def alter_App(self,AppValue,sleepTime6,IsAppValue):
+		self.clickAlterButton()
+		self.clearAppValue()
+		self.alterAppValue(AppValue)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime6)
+		self.assertAppValue(IsAppValue)
+	def del_App(self,sleepTime7,sleepTime8,sumAppNumber):
+		self.clickDelButton()
+		self.WaitTime(sleepTime7)
+		self.clickConfirmButton()
+		self.WaitTime(sleepTime8)
+		self.getIsSameAppText(sumAppNumber)
+	

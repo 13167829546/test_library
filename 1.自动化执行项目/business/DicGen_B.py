@@ -1,0 +1,40 @@
+from element.DicGen_E import DicGen_E
+class DicGen_B(DicGen_E):
+	def add_generalDic(self,sleepTime10,sleepTime1,DicName,DicValue,SysDec,sleepTime2,sleepTime3,sleepTime4):
+		self.clickSysNav()
+		self.WaitTime(sleepTime10)
+		self.clickDataCenter()
+		self.waitSysManVisible()
+		self.clickSys()
+		self.clickDic()
+		self.clickGeneralDic()
+		self.WaitTime(sleepTime1)
+		self.clickAddButton()
+		self.sendDicName(DicName)
+		self.sendDicValue(DicValue)
+		self.sendSysDec(SysDec)
+		self.clickDicType()
+		self.WaitTime(sleepTime2)
+		self.selectDicType()
+		self.WaitTime(sleepTime3)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime4)
+	def search_generalDic(self,DicName,sleepTime5,sleepTime6,assertDicName):
+		self.sendSearchKey(DicName)
+		self.WaitTime(sleepTime5)
+		self.clickSearchButton()
+		self.WaitTime(sleepTime6)
+		self.shouldContainKey(assertDicName)
+	def alter_generalDic(self,alterDicValue,sleepTime7,assertAlterDicValue):
+		self.clickAlterButton()
+		self.alterDicValue(alterDicValue)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime7)
+		self.shouldContainValue(assertAlterDicValue)
+	def del_generalDic(self,sleepTime8,sleepTime9,sumDicNumber):
+		self.clickDelButton()
+		self.WaitTime(sleepTime8)
+		self.clickConfirmButton()
+		self.WaitTime(sleepTime9)
+		self.getIsSameText(sumDicNumber)
+	

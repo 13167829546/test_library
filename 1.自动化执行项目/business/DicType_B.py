@@ -1,0 +1,40 @@
+from element.DicType_E import DicType_E
+class DicType_B(DicType_E):
+	def add_DicType(self,sleepTime8,sleepTime1,DicTypeName,DicTypeNO,DicTypeDec,sleepTime2):
+		self.clickSysNav()
+		self.WaitTime(sleepTime8)
+		self.clickDataCenter()
+		self.waitSysManVisible()
+		self.clickSys()
+		self.clickDic()
+		self.clickDicType()
+		self.WaitTime(sleepTime1)
+		self.clickAddButton()
+		self.sendDicTypeName(DicTypeName)
+		self.sendDicTypeNO(DicTypeNO)
+		self.sendDicTypeDec(DicTypeDec)
+		self.clickIsSystem()
+		self.clickSaveButton()
+		self.WaitTime(sleepTime2)
+	def search_DicType(self,SearchDicType,sleepTime3,sleepTime4,assertDicTypeName1,assertDicTypeNO1,assertDicTypeDec1):
+		self.sendSearchKey(SearchDicType)
+		self.waitSearchVisible()
+		self.WaitTime(sleepTime3)
+		self.clickSearchButton()
+		self.WaitTime(sleepTime4)
+		self.shouldContainTypeName1(assertDicTypeName1)
+		self.shouldContainTypeNO1(assertDicTypeNO1)
+		self.shouldContainTypeDec1(assertDicTypeDec1)
+	def alter_DicType(self,alterDicTypeName,sleepTime5,assertDicTypeName2):
+		self.clickAlterButton()
+		self.alterTypeName(alterDicTypeName)
+		self.clickSaveButton()
+		self.WaitTime(sleepTime5)
+		self.shouldContainTypeName2(assertDicTypeName2)
+	def del_DicType(self,sleepTime6,sleepTime7,sumDicTypeNumber):
+		self.clickDelTypeButton()
+		self.WaitTime(sleepTime6)
+		self.clickConfirmButton()
+		self.WaitTime(sleepTime7)
+		self.getIsSameDicTypeText(sumDicTypeNumber)
+	
