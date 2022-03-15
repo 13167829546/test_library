@@ -1,6 +1,6 @@
-from common.Logs import Log
-from common.BasePage import BasePageItems
-from common.File_Excel import File_Excel
+from common1.Logs import Log
+from common1.BasePage import BasePageItems
+from common1.File_Excel import File_Excel
 from time import sleep
 from PIL import Image
 import pytesseract

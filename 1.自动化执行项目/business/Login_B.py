@@ -1,8 +1,8 @@
 from element.Login_E import Login_E
 from time import sleep
 from element.FirstPage_E import FirstPage_E
-from common.Logs import Log
-from common.File_Excel import File_Excel
+from common1.Logs import Log
+from common1.File_Excel import File_Excel
 class Login_B(Login_E, FirstPage_E):
 	def 	login_businessl(self,username,password,check_code=0):
 		list = ["牵引作业系统自动化.xls", "登录"]

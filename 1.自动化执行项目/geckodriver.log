@@ -1,0 +1,23 @@
+1647337451609	geckodriver	INFO	Listening on 127.0.0.1:49457
+1647337454679	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49458" "-no-remote" "-profile" "C:\\Users\\huwo\\AppData\\Local\\Temp\\rust_mozprofileDjcPWd"
+1647337454894	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\huwo\\AppData\\Local\\Temp\\rust_mozprofileDjcPWd\\search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+DevTools listening on ws://localhost:49458/devtools/browser/f27f50a0-0e31-4273-bf11-ec3a7eb0e6bd
+1647337456496	Marionette	INFO	Listening on port 49464
+1647337456724	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647337475884	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647337480839	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://f2e.callme.work"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: http://webapi.amap.com/maps?v=1.4.10&key=5ce3151073e29e7a994f8e4a2905e6ed&plugin=AMap.Driving, line 13: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1647337586796	Marionette	INFO	Stopped listening on port 49464
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
